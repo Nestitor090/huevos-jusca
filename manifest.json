@@ -1,0 +1,20 @@
+{
+  "name": "Huevos Jusca",
+  "short_name": "Jusca",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#f4b400",
+  "icons": [
+    {
+      "src": "huevoos.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "huevoos.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

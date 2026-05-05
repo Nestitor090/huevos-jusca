@@ -1,0 +1,210 @@
+
+    :root {
+        --yema: #FFB300;
+        --tierra: #4E342E;
+        --pasto: #2E7D32;
+        --huevo: #FFF9F0;
+        --paja: #F7E8D0;
+    }
+
+    body { 
+        font-family: 'Poppins', sans-serif; 
+        background-color: var(--huevo); 
+        color: var(--tierra); 
+    }
+    
+    /* Navbar */
+    .navbar { 
+        background: rgba(255, 255, 255, 0.95); 
+        backdrop-filter: blur(5px); 
+        border-bottom: 3px solid var(--yema); 
+    }
+
+    .navbar-brand {
+        font-family: 'Pacifico', cursive;
+        font-size: 2.2rem !important;
+        color: var(--tierra) !important;
+        text-shadow: 2px 2px 0px var(--yema);
+    }
+
+    .nav-link {
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        margin: 0 10px;
+        position: relative;
+        transition: color 0.3s ease;
+        color: var(--tierra) !important;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: var(--yema);
+        transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after { width: 100%; }
+    .nav-link:hover { color: var(--yema) !important; }
+
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('/imagenes/hero-imagen.png');
+        background-size: cover;
+        background-position: center;
+        height: 85vh;
+        display: flex;
+        align-items: center;
+        color: white;
+        position: relative;
+    }
+    .hero h1 { font-family: 'Playfair Display', serif; font-size: 4rem; }
+    .hero-wave { position: absolute; bottom: 0; width: 100%; line-height: 0; }
+
+    /* --- EFECTOS DE IMÁGENES (MANTENIDOS Y ARREGLADOS) --- */
+    .producto-row {
+        align-items: center;
+        padding: 80px 0;
+        border-bottom: 1px solid rgba(78, 52, 46, 0.05);
+    }
+
+    .img-grande {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        border-radius: 60% 40% 70% 30% / 40% 50% 60% 70%;
+        box-shadow: 20px 20px 60px rgba(0,0,0,0.1);
+        transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto más suave */
+    }
+
+    /* Este es el efecto que pediste mantener */
+    .producto-row:hover .img-grande {
+        transform: scale(1.08) rotate(2deg); /* Se agranda un 8% y gira un poco */
+    }
+
+    .marca-titulo {
+        font-family: 'Fredoka', sans-serif;
+        font-size: 3rem;
+        color: var(--tierra);
+        margin-bottom: 1.5rem;
+    }
+
+    .descripcion-premium {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: #6d4c41;
+    }
+
+    /* Mapa */
+    .map-container { border-radius: 20px; overflow: hidden; border: 5px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+    /* Footer */
+    footer {
+        background-color: var(--tierra) !important;
+        color: var(--huevo) !important;
+        padding: 80px 0 30px;
+        border-top: 10px solid var(--yema);
+        position: relative;
+        z-index: 10;
+    }
+
+    footer p, footer span, .footer-link {
+        color: var(--huevo) !important;
+    }
+
+    .footer-logo {
+        font-family: 'Pacifico', cursive;
+        font-size: 2.5rem;
+        color: var(--yema) !important;
+        text-decoration: none;
+    }
+
+   .footer-heading {
+        font-family: 'Fredoka', sans-serif;
+        color: var(--yema) !important; /* Color naranja/yema para "SÍGUENOS" */
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 25px;
+    }
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        background: rgba(255, 255, 255, 0.1);
+        display: inline-block;
+        text-align: center;
+        border-radius: 50%;
+        color: white !important; /* Aquí forzamos que no sea azul */
+        text-decoration: none;
+        transition: 0.3s;
+        font-size: 1.2rem;
+    }
+
+    .social-icon:hover {
+        background: var(--yema);
+        color: var(--tierra) !important; /* El icono se vuelve café al pasar el mouse */
+        transform: translateY(-5px);
+    }
+
+    /* Botones */
+    .btn-jusca {
+        background-color: var(--yema) !important;
+        color: var(--tierra) !important;
+        font-family: 'Fredoka', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 12px 30px;
+        border-radius: 50px;
+        border: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 179, 0, 0.3);
+        text-decoration: none;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .btn-jusca:hover {
+        background-color: var(--tierra) !important;
+        color: var(--yema) !important;
+        transform: translateY(-3px);
+    }
+
+    /* --- ARREGLO DEL MODAL --- */
+    #modalCatalogo .modal-content {
+        background-color: var(--huevo) !important;
+        border: none;
+    }
+
+    #modalCatalogo .table thead th {
+        background-color: var(--paja) !important;
+        color: var(--tierra) !important;
+        font-family: 'Fredoka', sans-serif;
+    }
+
+    #modalCatalogo .table tbody td {
+        color: var(--tierra) !important;
+    }
+
+    #modalCatalogo .btn-close {
+        background-color: var(--yema);
+        opacity: 1;
+        border-radius: 50%;
+    }
+
+    #modalCatalogo tr:hover {
+        background-color: rgba(255, 179, 0, 0.1);
+    }
+    .hero .btn-jusca {
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+/* Asegurar que el modal esté por encima de todo */
+.modal-content {
+    pointer-events: auto !important;
+}
